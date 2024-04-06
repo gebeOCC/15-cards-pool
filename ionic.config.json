@@ -1,0 +1,7 @@
+{
+  "name": "15-cards-pool",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
