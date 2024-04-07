@@ -1,0 +1,290 @@
+
+  /* Add this CSS to your stylesheet */
+  ::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+  }
+  
+  /* Optional: Hide scrollbar for other browsers */
+  * {
+    scrollbar-width: none;
+  }
+
+  .toolbar-background{
+background-color: black;
+  }
+  
+  .header-style{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-style h1{
+    width: 25%;
+  }
+
+  .header-style img{
+    width: 70%;
+    height: 70%;
+  }
+  
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    padding-top: 5px;
+    overflow-y: auto;
+    background-color: gray;
+    background-image: url("/table.png");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+img{
+    cursor: pointer;
+}
+
+.all-balls{
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:teal;
+}
+
+.one-seven{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.eight-fifthen{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.player-box{
+    width: 96%;
+    height: 12vh;
+    border-color: black;
+    background-color: #003566;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    border-radius: 10px;
+}
+
+.player{
+    background-color: none;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1%;
+}
+
+.input{
+    background-color: azure;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 100%;
+    width: 90%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.trash{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 9%;
+}
+
+.trash img{
+    height: 50%;
+}
+
+.trash img{
+    height: 70%;
+    align-self: center;
+}
+
+.balls-button{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1%;
+}
+
+.add-balls-button{
+    height: 60%;
+    width: 100%;
+    font-size: x-large;
+    transition: background-color 0.10s;
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.add-button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    font-size: 100%;
+}
+
+.add-balls-button:active{
+    background-color:darkslategrey;
+    border-color: 1px solid black;
+    color: black;
+}
+
+.balls-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #faf2f4;
+    justify-content:space-around;
+    align-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.balls {
+    background-color: #faf2f4;
+    height: 100%;
+    justify-content:center;
+    align-content: center;
+    
+}
+
+.ball {
+    background-color: #faf2f4;
+    height: 90%;
+    width: 100%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.ball img{
+    height: 100%;
+    width: 100%px;
+}
+
+.add-player{
+    height: 5vh;
+    width: 23vw;
+    margin-right: 10px;
+    background-color: #003566;
+    transition: transform 0.10s;
+}
+
+
+.add-player:active{
+    transform: translateX(2px) translateY(2px);
+}
+
+.clear-all-numbers{
+    height: 5vh;
+    width: 23vw;
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    border-radius: 0px 10px 10px 0px;
+    transition: background-color 0.10s, color 0.10s, border-color 0.10s;
+}
+
+.random-number{
+    height: 5vh;
+    width: 23vw;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 3px;
+}
+
+.random-number:active{
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+    border-color: rgba(0, 0, 0, 0.500);
+}
+
+
+
+.clear-all-numbers:active{
+    background-color: rgba(255, 0, 0, 0.500);
+    color: white;
+    border-color: rgba(255, 0, 0, 0.500);
+}
+
+.modal-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  }
+  
+  .my-custom-modal {
+    height: 100%;
+    width: 100%;
+    --background: rgba(0, 0, 0, 0);
+    z-index: 999 !important;
+  }
+
+  .player-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    outline: none;
+  }
+  
+  .submit{
+    height: 35px;
+    width: 60px;
+    margin-right: 10px;
+    background-color: #003566;
+  }
+
+  .cancel{
+    height: 35px;
+    width: 60px;
+    background-color: white;
+    color: #003566;
+    border: 1px solid #003566;
+  }
