@@ -5,7 +5,7 @@ import './Tab1.css';
 const Tab1: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentPlayerName, setCurrentPlayerName] = useState('');
-  const [players, setPlayers] = useState<{ name: string, numbers: number[] }[]>([]);
+  const [players, setPlayers] = useState<{ name: string, numbers: number[], backgroundColor: string }[]>([]);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
@@ -30,6 +30,7 @@ const Tab1: React.FC = () => {
       setShowToast(true);
     }
   }
+
 
   function handleCancel() {
     setShowModal(false);
@@ -83,12 +84,16 @@ const Tab1: React.FC = () => {
     setPlayers(updatedPlayers);
   }
 
-  const backgroundColors = ['461220', '590d22'];
+  const backgroundColors = ['#cbbd7f', '#264653', '#588157', '#461220', "#3c1642", "#230903"];
 
   function getRandomColor(): string {
-    return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+    const availableColors = backgroundColors.filter(color => !players.some(player => player.backgroundColor === color));
+    if (availableColors.length === 0) {
+      // If all colors have been used, reset the array
+      return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+    }
+    return availableColors[Math.floor(Math.random() * availableColors.length)];
   }
-
   const [ballColor, setBallColor] = useState<Record<number, number>>({
     1: 1,
     2: 2,
@@ -96,7 +101,7 @@ const Tab1: React.FC = () => {
     4: 4,
     5: 5,
     6: 6,
-    7: 7,
+    7: 7, 
     8: 8,
     9: 9,
     10: 10,
@@ -130,7 +135,7 @@ const Tab1: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <div className='header-style'>
-            <h2 style={{margin: '0'}}>5 cards</h2>
+            <h2 style={{ margin: '0' }}>5 cards</h2>
             <img src="/cue.png" alt="" />
           </div>
         </IonToolbar>
@@ -186,8 +191,8 @@ const Tab1: React.FC = () => {
             duration={3000}
           />
         </div>
-        
-      <div className='all-balls'>
+
+        <div className='all-balls'>
           <div className='one-seven'>
             <img onClick={() => shotBall(1)} src={`/balls/${ballColor[1]}.png`} alt="" />
             <img onClick={() => shotBall(2)} src={`/balls/${ballColor[2]}.png`} alt="" />

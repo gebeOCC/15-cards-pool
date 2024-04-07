@@ -78,7 +78,6 @@ img{
     width: 96%;
     height: 12vh;
     border-color: black;
-    background-color: #003566;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -287,4 +286,16 @@ img{
     background-color: white;
     color: #003566;
     border: 1px solid #003566;
+  }
+
+  color{
+    color: #cdb4db;
+    color: #cbbd7f;
+    color: #264653;
+    color: #588157;
+    color: #6f1d1b;
+    color: #461220;
+    color: #590d22;
+    color: #;
+    color: #;
   }
